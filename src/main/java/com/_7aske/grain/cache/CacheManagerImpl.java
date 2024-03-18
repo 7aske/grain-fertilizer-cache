@@ -1,8 +1,5 @@
 package com._7aske.grain.cache;
 
-import com._7aske.grain.core.cache.Cache;
-import com._7aske.grain.core.cache.CacheManager;
-
 import java.util.HashMap;
 import java.util.Map;
 

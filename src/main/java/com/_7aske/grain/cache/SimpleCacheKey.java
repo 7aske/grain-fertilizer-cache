@@ -1,7 +1,5 @@
 package com._7aske.grain.cache;
 
-import com._7aske.grain.core.cache.CacheKey;
-
 import java.io.Serializable;
 import java.util.Arrays;
 

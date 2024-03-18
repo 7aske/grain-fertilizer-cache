@@ -1,8 +1,5 @@
 package com._7aske.grain.cache;
 
-import com._7aske.grain.core.cache.Cache;
-import com._7aske.grain.core.cache.CacheKey;
-
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -17,7 +14,7 @@ public class ConcurrentHashMapCache implements Cache {
 
     @Override
     public String getName() {
-        return null;
+        return name;
     }
 
     @Override
