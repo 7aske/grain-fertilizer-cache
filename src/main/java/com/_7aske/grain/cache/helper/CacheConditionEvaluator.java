@@ -1,6 +1,6 @@
 package com._7aske.grain.cache.helper;
 
-import com._7aske.grain.core.cache.annotation.CacheEvict;
+import com._7aske.grain.cache.annotation.CacheEvict;
 import com._7aske.grain.gtl.interpreter.Interpreter;
 
 import java.lang.reflect.Method;

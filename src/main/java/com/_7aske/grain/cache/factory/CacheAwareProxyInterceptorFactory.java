@@ -4,17 +4,26 @@ import com._7aske.grain.cache.helper.CacheNameResolver;
 import com._7aske.grain.cache.Cache;
 import com._7aske.grain.cache.CacheKeyGenerator;
 import com._7aske.grain.cache.CacheManager;
-import com._7aske.grain.core.reflect.AnnotationProxyInterceptorAbstractFactory;
+import com._7aske.grain.core.reflect.ProxyInterceptorAbstractFactory;
 
 import java.lang.reflect.Method;
 
-public abstract class CacheAwareProxyInterceptorFactory implements AnnotationProxyInterceptorAbstractFactory {
+public abstract class CacheAwareProxyInterceptorFactory implements ProxyInterceptorAbstractFactory {
     protected final CacheManager cacheManager;
     protected final CacheKeyGenerator cacheKeyGenerator;
 
     protected CacheAwareProxyInterceptorFactory(CacheManager cacheManager, CacheKeyGenerator cacheKeyGenerator) {
         this.cacheManager = cacheManager;
         this.cacheKeyGenerator = cacheKeyGenerator;
+    }
+
+    @Override
+    public boolean supports(Object object) {
+        if (object instanceof Method method) {
+            return method.isAnnotationPresent(getDiscriminatorType());
+        }
+
+        return false;
     }
 
     protected Cache resolveCache(Method method) {

@@ -2,7 +2,7 @@ package com._7aske.grain.cache.interceptor;
 
 import com._7aske.grain.cache.Cache;
 import com._7aske.grain.cache.CacheKeyGenerator;
-import com._7aske.grain.core.cache.annotation.CacheEvict;
+import com._7aske.grain.cache.annotation.CacheEvict;
 
 import java.lang.reflect.Method;
 

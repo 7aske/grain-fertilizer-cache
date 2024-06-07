@@ -1,4 +1,4 @@
-package com._7aske.grain.core.cache.annotation;
+package com._7aske.grain.cache.annotation;
 
 import com._7aske.grain.core.cache.annotation.meta.CacheAware;
 
