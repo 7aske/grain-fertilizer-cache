@@ -5,6 +5,7 @@ import com._7aske.grain.cache.factory.CacheEvictingProxyInterceptorFactory;
 import com._7aske.grain.cache.factory.CacheResolvingProxyInterceptorFactory;
 import com._7aske.grain.cache.factory.CacheUpdatingProxyInterceptorFactory;
 import com._7aske.grain.core.component.Grain;
+import com._7aske.grain.core.component.Order;
 import com._7aske.grain.core.configuration.GrainFertilizer;
 import com._7aske.grain.core.reflect.ProxyInterceptorAbstractFactory;
 

@@ -23,6 +23,14 @@ public abstract class CacheAwareProxyInterceptorFactory implements ProxyIntercep
             return method.isAnnotationPresent(getDiscriminatorType());
         }
 
+        if (object instanceof Class) {
+            for (Method method : ((Class<?>) object).getMethods()) {
+                if (method.isAnnotationPresent(getDiscriminatorType())) {
+                    return true;
+                }
+            }
+        }
+
         return false;
     }
 
