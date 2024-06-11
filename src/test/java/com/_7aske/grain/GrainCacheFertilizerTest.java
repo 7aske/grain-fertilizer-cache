@@ -7,6 +7,7 @@ import com._7aske.grain.core.component.Grain;
 import com._7aske.grain.core.component.GrainInjector;
 import com._7aske.grain.core.configuration.Configuration;
 import com._7aske.grain.core.reflect.ProxyInterceptorAbstractFactoryRegistry;
+import com._7aske.grain.core.reflect.factory.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -42,7 +43,7 @@ class GrainCacheFertilizerTest {
     @BeforeEach
     void setUp() {
         grainInjector = new GrainInjector(Configuration.createDefault());
-        grainInjector.inject(Set.of(ProxyInterceptorAbstractFactoryRegistry.class, GrainCacheFertilizer.class));
+        grainInjector.inject(Set.of(CompositeGrainFactory.class, InterfaceGrainFactory.class, DefaultGrainFactory.class, GrainMethodGrainFactory.class, ProxyRegistryGrainFactory.class, ProxyInterceptorAbstractFactoryRegistry.class, GrainCacheFertilizer.class));
     }
 
     @Test
